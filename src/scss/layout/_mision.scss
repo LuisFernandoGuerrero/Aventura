@@ -1,0 +1,138 @@
+.mision {
+    padding-top: 9rem;
+    max-width: 100%;
+    @include tablet {
+        padding-top: 0rem;  
+    }
+    @include desktop {
+        padding-top: 9rem;
+    }
+}
+
+.informacion-mision {
+    padding: 0;
+
+    @include tablet {
+        padding-top: 3rem;
+    }
+    h3 {
+        text-align: center;
+        padding: 0;
+        @include tablet {
+            padding-top: 2rem;
+        }
+        @include desktop {
+            text-align: left;
+        }
+    }
+    .descripcion-mision {
+        font-size: 2rem;
+        font-weight: $media;
+        line-height: 1.3;
+    }
+
+    .descripcion-reto {
+        font-size: 1.3rem;
+    }
+}
+
+.principal {
+    min-height: 50rem;
+    width: 100%;
+    position: relative;
+
+    .fuerza, .fuerzad {
+        display: block;
+        max-width: 35rem; 
+        font-size: 15rem;
+        margin: 0;
+        line-height: 1;
+        text-align: center;
+        color: $blanco;
+        position: absolute;
+        top: 5rem;
+        right: 4rem;
+        @include tablet {
+            top: 12rem;
+            right: 22rem;
+        }
+        @include desktop {
+            top: 5rem;
+            right: 2rem;
+        }
+    }
+
+    .fuerzad{
+        top: 19rem;
+        right: 3.3rem;
+        @include tablet {
+            top: 25rem;
+            right: 22rem;
+        }
+        @include desktop {
+            top: 19rem;
+            right: 1.3rem;
+        }
+    }
+
+    .encima, .challenges {
+        position: absolute;
+        font-size: 5rem;
+        color: $rojo;
+        margin: 0;
+    }
+    .encima{
+        top: 2rem;
+        left: 2rem;
+        z-index: 1;
+        @include tablet {
+            top: 8rem;
+            left: 21rem;
+        }
+        @include desktop {
+            top: 2rem;
+            left: 0;
+        }
+    }
+    .challenges {
+        top: 8rem;
+        left: 2rem;
+        font-size: 9rem;
+        font-weight: $delgada;
+        -webkit-transform: rotate(-13deg); 
+        -moz-transform: rotate(-13deg); 
+        -ms-transform: rotate(-13deg); 
+        -o-transform: rotate(-13deg); 
+        transform: rotate(-13deg); 
+        
+        -webkit-transform-origin: 50% 50%; 
+        -moz-transform-origin: 50% 50%; 
+        -ms-transform-origin: 50% 50%; 
+        -o-transform-origin: 50% 50%; 
+        transform-origin: 50% 50%; 
+
+        @include tablet {
+            top: 15rem;
+            left: 21rem;
+        }
+        @include desktop {
+            top: 8rem;
+            left: 2rem;
+        }
+    }
+    img {
+        width: 40rem;
+        position: absolute;
+        top: 17rem;
+        right: 0;
+        @include tablet {
+            top: 25rem;
+            right: 18rem;
+        }
+        @include desktop {
+            width: 45rem;
+            top: 15rem;
+            right: -5rem;
+        }
+    }
+}

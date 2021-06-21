@@ -1,0 +1,74 @@
+.footer{ 
+    height: 50rem;
+    width: 100vw;
+    background-image: url('/build/img/imagenfooter.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 13rem;
+    @include desktop {
+        height: 36rem;
+    }
+    .logo {
+        padding-bottom: 0;
+        text-align: center;
+        color: $blanco;
+        font-size: 5rem;
+        padding: 2rem;
+        @include tablet {
+            -webkit-transform: rotate(0deg); 
+            -moz-transform: rotate(0deg); 
+            -ms-transform: rotate(0deg); 
+            -o-transform: rotate(0deg); 
+            transform: rotate(0deg); 
+            
+            -webkit-transform-origin: 50% 50%; 
+            -moz-transform-origin: 50% 50%; 
+            -ms-transform-origin: 50% 50%; 
+            -o-transform-origin: 50% 50%; 
+            transform-origin: 50% 50%;
+        }
+    }
+}
+
+.opacidad-footer {
+    height: 36rem;
+    width: 100%;
+    background-color: rgba($negro, 0.3);
+    position: absolute;
+    z-index: 0;
+}
+
+.contenido-footer {
+    padding: 1rem;
+    @include grid (2, 0);
+    @include desktop {
+        @include grid (5, 0);
+        align-items: center;
+        height: 100%;
+    }
+    nav {
+        text-align: center;
+        @include desktop {
+            text-align: start;
+            height: 25rem;
+        }
+    }
+    a {
+        color: $blanco;
+        text-transform: capitalize;
+        font-weight: $negrita;
+    }
+}
+
+.subChallenges, 
+.subConsejos, 
+.subGaleria {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: $rojo;
+}
+

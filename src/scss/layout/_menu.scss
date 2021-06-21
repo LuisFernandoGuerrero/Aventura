@@ -1,0 +1,164 @@
+.menu {
+    margin: 0;
+    @include tablet {
+        display: flex;
+        margin: auto;
+        padding-top: 2rem;
+    }
+    .izquierda {
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            justify-content: space-around;    
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        @include desktop {
+            justify-content: space-between;
+        }
+        p {
+            margin: 0;
+            font-weight: $negrita;
+            padding-right: 0;
+            text-transform: uppercase;
+            font-size: 2.4rem;
+            @include tablet {
+                writing-mode: tb;
+                font-size: 2rem;
+                text-align: center;
+
+                -webkit-transform: rotate(180deg); 
+                -moz-transform: rotate(180deg); 
+                -ms-transform: rotate(180deg); 
+                -o-transform: rotate(180deg); 
+                transform: rotate(180deg); 
+                
+                -webkit-transform-origin: 50% 50%; 
+                -moz-transform-origin: 50% 50%; 
+                -ms-transform-origin: 50% 50%; 
+                -o-transform-origin: 50% 50%; 
+                transform-origin: 50% 50%; 
+            }
+            @include desktop {
+                padding-bottom: 7rem;
+                font-size: 3.5rem;
+            }
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            writing-mode: initial;
+            align-items: center;
+            margin: 0;
+            padding-left: 2rem;
+            @include tablet {
+                padding: 0;
+                display: block;
+            }
+            li {
+                padding-right: 0;
+                @include tablet {
+                    text-align: center;
+                    padding-top: 1rem;
+                    font-size: 1.6rem;
+                }
+                @include desktop {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.contenedor-menu {
+
+    display: grid;
+    @include tablet {
+        grid-template-columns: 0.7fr 3fr;
+        gap: 2rem;
+    }
+
+    .texto-menu {
+        padding-top: 0;
+        @include tablet {
+            padding-top: 4rem;
+        }
+        @include desktop {
+            padding-top: 4.5rem;
+        }
+        .titulo {
+            display: flex;
+            @include tablet {
+                display: block;
+            }
+        }
+    }
+    
+    .titulo{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        .silaba {
+            color: $rojo;
+            font-weight: $negrita;
+            font-size: 6rem;
+            text-transform: uppercase;
+            margin: 0;
+            br {
+                display: none;
+            @include tablet {
+                display: block;
+            }
+            }
+            @include tablet {
+                line-height: 1;
+                text-align: left;
+                padding: 0;
+                word-break: break-all;
+                width: 10rem;
+            }
+            @include desktop {
+                width: 18rem;
+                font-size: 11rem;
+            }
+        }
+    }
+    p {
+        margin: 0;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        color: $grisOscuro;
+        padding-top: $separacion/2;
+        @include tablet {
+            font-size: 1rem;
+            padding: $separacion 0;;
+        }
+        @include desktop {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.contenedor-menu .imagen-menu {  
+    overflow: hidden;
+    width: 100%;
+    border-radius: 0 0 2rem 0;
+    ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: cambio 20s infinite;
+        animation-direction: alternate;
+        li {
+            list-style: none;
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+                padding-top: 3rem;
+                @include tablet {
+                    border-radius: 0.5rem 1rem 3rem 0.5rem;
+                }
+            }
+        }
+    }
+}

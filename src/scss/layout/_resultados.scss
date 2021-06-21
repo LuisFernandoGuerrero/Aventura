@@ -1,0 +1,222 @@
+.resultados {
+    padding-top: 5rem;
+    display: grid;
+
+    @include desktop {
+        gap: $separacion/2;
+        grid-template-columns: 1fr 0.3fr 2.7fr;
+    }
+}
+
+.infoRetosCompletados {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    @include desktop {
+        max-height: 65rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .subTitulo {
+        width: 20rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: $negrita;
+        line-height: 1;
+        margin: 0;
+        text-align: center;
+
+        @include desktop {
+            width: 24rem;
+            text-align: start;
+
+        }
+        span {
+            color: $rojo;
+            font-size: 7rem;
+            @include desktop {
+                font-size: 11rem;
+            }
+        }
+    }
+
+    .probabilidades {
+        text-transform: capitalize;
+        font-size: 5rem;
+        width: 30rem;
+        line-height: 1;
+        margin: 0;
+        text-align: center;
+        padding-top: 2rem;
+
+        @include tablet {
+            text-align: start;
+            padding-top: 0;
+        }
+        @include desktop {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            font-weight: $negrita;
+        }
+        span {
+            color: $rojo;
+            font-size: 7rem;
+        }
+    }
+
+    .saber-mas {
+        padding-right: 0rem;
+        width: 25rem;
+        padding-top: 2rem;
+        justify-content: center;
+        @include desktop {
+            padding-top: 0;
+            padding-right: 2rem;
+            width: auto;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.tusResultados {
+    @include desktop {
+        writing-mode: tb;
+        position: relative;
+        height: 70rem;
+        -webkit-transform: rotate(180deg); 
+        -moz-transform: rotate(180deg); 
+        -ms-transform: rotate(180deg); 
+        -o-transform: rotate(180deg); 
+        transform: rotate(180deg); 
+    
+        -webkit-transform-origin: 50% 50%; 
+        -moz-transform-origin: 50% 50%; 
+        -ms-transform-origin: 50% 50%; 
+        -o-transform-origin: 50% 50%; 
+        transform-origin: 50% 50%; 
+    }
+
+    p {
+        margin: 0;
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: $blanco;
+        font-weight: $negrita;
+        @include desktop {
+            font-size: 10rem;
+            position: absolute;
+            right: -5rem;
+        }
+    }
+}
+
+.imagenRetosCompletados {
+    position: relative;
+    height: 40rem;
+    @include tablet {
+        height: 60rem;
+    }
+    @include desktop {
+        grid-column: 3 / 4;
+        height: 72rem;
+    }
+
+    .cuadroRojo {
+        position: absolute;
+        background-color: rgba($negro, 0.2);
+        border: 2rem solid $rojo;
+        width: 25rem;
+        height: 33rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        top: 2rem;
+        left: 7rem;
+
+        @include tablet {
+            width: 35rem;
+            height: 45rem;
+            top: 7rem;
+            left: 20rem;
+        }
+
+        @include desktop {  
+            width: 40rem;
+            height: 55rem;
+            left: 22rem;
+        }
+
+        p, a{ 
+            color: $blanco;
+            text-transform: uppercase;
+            line-height: 1;
+            margin: 0;
+            font-weight: $delgada;
+            padding: 2.5rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            font-size: 1.3rem;
+            @include tablet {
+                font-size: 2rem;
+                padding: 2.5rem;
+                padding-bottom: 3rem;
+                padding-top: 0;
+            }
+        }
+
+        a {
+            font-weight: $negrita;
+        }
+        .subTitulo {
+            font-size: 1.8rem;
+            font-weight: $negrita;
+            @include tablet {
+                font-size: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        .saber-mas {
+            font-size: 2rem;
+            justify-content: flex-end;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            @include tablet {
+                padding-top: 0;
+                font-size: 1.4rem;
+            }
+            i {
+                font-size: 1.5rem;
+                @include tablet{
+                    font-size: 2.5rem;
+                }
+                
+            }
+        }
+    }
+
+    .flecha {
+        display: none;
+        @include desktop {
+            display: block;
+            position: absolute;
+            font-size: 15rem;
+            color: $blanco;
+            bottom: 0;
+            left: -2rem;
+        }
+    }
+    .flechaDos {
+        left: 5rem;
+    }
+
+    img {
+        height: 95%;
+        padding-top: 0;
+        @include desktop {
+            padding-top: 2rem;
+        }
+    }
+}

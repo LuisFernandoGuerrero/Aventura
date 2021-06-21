@@ -1,0 +1,87 @@
+.navegacion {
+    display: block;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 60%;
+    height: auto;
+    border-radius: 0 0 0 3rem;
+    border-left: 1px solid darken($grisClaro, 20);
+    background-color: darken($azulFondo, 10);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .5s ease-in-out, opacity .7s linear, height .7s linear, background-color .7s linear;
+
+    ul {
+        list-style: none;
+        font-family: $oswald;
+        font-size: 2rem;
+        padding-left: 0;
+        margin: 0;
+        li {
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid darken($grisClaro, 15);
+            text-align: center;
+            margin-right: 0;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+            
+        }
+    }
+    @include tablet {
+        position: initial;
+        width: auto;
+        visibility: visible;
+        border-radius: 0;
+        opacity: 1;
+        background-color: $azulFondo;
+        height: auto;
+        border: none;
+        ul {
+            display: flex;
+            list-style: none;
+            font-family: $oswald;
+            font-size: 2rem;
+            align-items: center;
+            li {
+                margin-top: 0;
+                padding-bottom: 0;
+                margin-right: 2rem;
+                border-bottom: none;
+                justify-content: flex-end;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.menuCelular {
+    width: 97%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    img {
+        width: 3rem;
+        filter: invert(100%);
+        position: relative;
+        top: 0.3rem;
+        right: .4rem;
+    }
+
+    @include tablet {
+        display: none; 
+    }
+}
+
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    align-items: center;
+}

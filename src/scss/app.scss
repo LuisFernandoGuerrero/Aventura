@@ -1,0 +1,17 @@
+/* Basicas */
+@import 'base/utilidades';
+@import 'base/normalize';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/keyframes';
+
+/* LAYOUT */
+@import 'layout/cabecera';
+@import 'layout/menu';
+@import 'layout/navegacion';
+@import 'layout/retos';
+@import 'layout/mision';
+@import 'layout/resultados';
+@import 'layout/consejos';
+@import 'layout/galeria';
+@import 'layout/footer';

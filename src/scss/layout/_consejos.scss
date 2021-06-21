@@ -1,0 +1,124 @@
+.consejo { 
+    padding-top: 14rem;
+    display: grid;
+
+    @include tablet {
+        grid-template-columns: 0.3fr 3fr;
+    }
+}
+
+.tituloConsejo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 95%;
+    @include tablet {
+        writing-mode: tb;
+        -webkit-transform: rotate(180deg); 
+        -moz-transform: rotate(180deg); 
+        -ms-transform: rotate(180deg); 
+        -o-transform: rotate(180deg); 
+        transform: rotate(180deg); 
+        -webkit-transform-origin: 50% 50%; 
+        -moz-transform-origin: 50% 50%; 
+        -ms-transform-origin: 50% 50%; 
+        -o-transform-origin: 50% 50%; 
+        transform-origin: 50% 50%; 
+        max-width: auto;
+    }
+    p{
+        margin: 0;
+        color: $rojo;
+        font-size: 11rem;
+        font-weight: $negrita;
+        text-transform: uppercase;
+    }
+}
+
+.imagenConsejo {
+    height: 40rem;
+    position: relative;
+    width: 95%;
+
+    @include tablet {
+        width: 100%;
+    }
+    @include desktop {
+        height: 60rem;
+    }
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.descripcionConsejo {
+    position: absolute;
+    background-color: $azulFondo;
+    bottom: -15rem;
+    
+    @include tablet {
+        width: 23rem;
+        height: 16rem;
+        bottom: 0;
+    }
+    @include desktop {
+        width: 33rem;
+        height: 21rem;
+    }
+
+    .subTituloConsejo {
+        font-size: 2rem;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: $negrita;
+        padding-top: 1rem;
+
+        @include desktop {
+            font-size: 3rem;
+            padding-top: 2rem;
+        }
+    }
+
+    .consejoDesc {
+        font-size: 1rem;
+        margin: 0;
+        padding: 2rem 1rem;
+        color: $grisOscuro;
+        @include desktop {
+            font-size: 1.2rem;
+        }
+    }
+
+    .saber-mas {
+        font-size: 2rem;
+        i {
+            padding-right: .5rem;
+            padding-left: 2rem;
+        }
+    }
+}
+.menu-slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $azulFondo;
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            font-size: 3rem;
+            margin-right: 1rem;
+            width: 5rem;
+            text-align: center;
+            display: block;
+            cursor: pointer;
+            &:target {
+                text-decoration: underline;
+                text-decoration-color: $rojo;
+                text-decoration-line: overline underline;
+            }
+        }
+    }
+}

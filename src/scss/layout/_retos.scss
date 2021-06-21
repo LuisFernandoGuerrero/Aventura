@@ -1,0 +1,79 @@
+.popular {
+    padding-top: 12rem;
+    @include desktop {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+h2,h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: $media;
+    padding: $separacion/2 1rem;
+    font-size: 4rem;
+    padding-top: 0;
+    @include tablet {
+        text-align: left;
+        font-size: 5rem; 
+    }
+}
+
+.reto {
+    padding-bottom: 5rem;
+    @include tablet {
+        display: flex;
+        padding-bottom: 2rem;
+        align-items: center;
+    }
+    
+    img {
+        width: 98%;
+        @include tablet {
+            width: 30rem;
+            height: auto;
+        }
+        @include desktop {
+            width: 50rem;
+        }
+    }
+}
+
+.informacion-reto {
+    padding-left: 2rem;
+    max-width: 50rem;
+}
+.titulo-reto {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: $media;
+    font-size: 3rem;
+    padding: 0;
+    padding-top: 2rem;
+    text-decoration: underline;
+
+}
+.descripcion-reto {
+    font-weight: $delgada;
+    color: $grisOscuro;
+}
+.saber-mas {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-weight: $negrita;
+    font-size: 3.5rem;
+    align-items: center;
+    padding-right: 2rem;
+    
+    i {
+        color: $rojo;
+        padding: 0 2rem;
+        padding-left: 0;
+    }
+
+    @include desktop {
+        justify-content: flex-start;
+        padding-right: 0;
+    }
+}

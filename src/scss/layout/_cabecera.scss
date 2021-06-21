@@ -1,0 +1,31 @@
+.cabecera {   
+    margin: 0; 
+    @include tablet {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $grisClaro;
+        justify-content: space-between;
+    }
+}
+
+.contenedor-header {
+    display: flex;
+    flex-direction: row;
+}
+.logo {
+    font-size: 7rem;
+    cursor: pointer;
+    font-family: $satisfy;
+}
+
+@include tablet {
+    .contenedor-header{
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            padding-left: 2rem;
+            font-size: 6rem;
+        }
+    }
+}
+

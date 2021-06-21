@@ -1,0 +1,149 @@
+.galeria {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 10rem;
+    @include tablet {
+        padding-top: 0;
+    }
+    @include desktop {
+        @include grid(3, 2rem);
+        padding-top: 18rem;
+    }
+}
+
+.galeria-videos, .galeria-fotos {
+    width: 98%;
+    margin: 0 auto;
+    height: 40rem;
+    position: relative;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3rem;
+    @include tablet {
+        height: 43rem;
+    }
+    @include desktop {
+        background-position: center bottom;
+        margin-bottom: 0;
+        height: 45rem;
+        width: 45rem;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.galeria-videos {
+    background-image: url('/build/img/galeriaVideo.webp');
+    background-position: center bottom;
+}
+.galeria-fotos {
+    background-image: url('/build/img/galeriaFotos.webp');
+}
+
+.descripcionCadaUna {
+    position: absolute;
+    background-color: rgba($negro, 0.4);
+    bottom: 0;
+    padding: 2rem;
+    background-color: rgba($negro, $alpha: 0.3);
+    transition: background-color 0.5s linear;
+    p {
+        color: $blanco;
+        font-weight: $negrita;
+        margin: 0;
+    }
+    .info {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: $media;
+        padding-bottom: 2rem;
+    }
+}
+
+.descripcionCadaUna:hover {
+    background-color: lighten($negro, 10);
+}
+
+img.imagenPeque {
+    position: absolute;
+    z-index: 2;
+    width: 3rem;
+    height: 3rem;
+    top: 2rem;
+    left: 2rem;
+    filter: invert(70%);
+}
+
+.descripcionGaleria {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 50rem;
+    width: 100%;
+    padding-bottom: 2rem;
+    position: relative;
+    @include desktop {
+        display: block;
+        width: 45rem;
+    }
+    
+    .subTituloGaleria {
+        text-transform: uppercase;
+        font-weight: $negrita;
+        font-size: 8rem;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        text-align: left;
+        @include tablet {
+            text-align: center;
+        }
+        @include desktop {
+            text-align: left;
+        }
+    }
+
+    .fotoyvideo {
+        font-size: 6rem;
+        width: 35rem;
+        color: lighten($rojo, 17);
+        margin: 0;
+        position: absolute;
+        top: 15rem;
+        right: -1rem;
+        text-transform: capitalize;
+        
+        -webkit-transform: rotate(-13deg); 
+        -moz-transform: rotate(-13deg); 
+        -ms-transform: rotate(-13deg); 
+        -o-transform: rotate(-13deg); 
+        transform: rotate(-13deg); 
+        
+        -webkit-transform-origin: 50% 50%; 
+        -moz-transform-origin: 50% 50%; 
+        -ms-transform-origin: 50% 50%; 
+        -o-transform-origin: 50% 50%; 
+        transform-origin: 50% 50%; 
+
+        @include tablet {
+            top: 19rem;
+            right: 16rem;
+        }
+        @include desktop {
+            top: 6rem;
+            right: 4rem;
+        }
+    }
+    .descripcionG {
+        margin: 0;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+        color: $grisOscuro;
+        width: 30rem;
+    }
+}
